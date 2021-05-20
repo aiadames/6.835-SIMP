@@ -1,7 +1,7 @@
 const fs = require('fs');
 const SpotifyWebApi = require('spotify-web-api-node');
 // TODO: COPY ACCESS TOKEN HERE
-// const token = ""
+// const token = "";
 const spotifyApi = new SpotifyWebApi();
 spotifyApi.setAccessToken(token);
 var paused = false;
@@ -342,7 +342,7 @@ var processSpeech = function(transcript) {
   }
 
 
-  if (userSaid(transcript, ["queue", "Queue", "q", "Q"])) {
+  if (userSaid(transcript, ["queue", "Queue", "q", "Q", "cute", "queue"])) {
     if (userSaid(transcript, ["happy", "Happy"])) {
       // Search playlists whose name or description contains 'happy'
       updateEmotion("HAPPY");

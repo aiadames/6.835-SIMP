@@ -5,7 +5,8 @@ arguments[4][1][0].apply(exports,arguments)
 },{"dup":1}],3:[function(require,module,exports){
 const fs = require('fs');
 const SpotifyWebApi = require('spotify-web-api-node');
-const token = " BQDIKjwaUD_FmdeAsBGeIzIe4-FR3FAIRAlMB3_7lysKjqpOzZM7Gcg4snYY_eT9UmLVQCCYuged5Mr491oDRUH_4eDFaE8P1dAsgZ_icOHFRr2ixEiugMqH_JodYw3GQxyj90jWKEaAxkCevLqmc0ATrrEba2lpeAwRbltxnM2v4bat6h042BqDB9GG3vE5V92DmORWzqI6a9MzzZa8vlWy_1oCr-_Ea82vS7uToFk2X5Yqnq9724ndz-Qp4OhlpBnwPSG7Sr6aWOkt_f_-Pu565H846Ko"
+// TODO: COPY ACCESS TOKEN HERE
+// const token = "";
 const spotifyApi = new SpotifyWebApi();
 spotifyApi.setAccessToken(token);
 var paused = false;
@@ -288,7 +289,7 @@ function pauseMusic(){
         console.log('Something went wrong!', err);
       });
     } else {
-      console.log("User is not playing anything, or doing so in private FISTTTT.");       
+      console.log("User is not playing anything, or doing so in private.");       
     }
     });  
     togglePause();
@@ -346,7 +347,7 @@ var processSpeech = function(transcript) {
   }
 
 
-  if (userSaid(transcript, ["queue", "Queue", "q", "Q"])) {
+  if (userSaid(transcript, ["queue", "Queue", "q", "Q", "cute", "queue"])) {
     if (userSaid(transcript, ["happy", "Happy"])) {
       // Search playlists whose name or description contains 'happy'
       updateEmotion("HAPPY");

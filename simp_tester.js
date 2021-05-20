@@ -29,7 +29,7 @@ const scopes = [
 var spotifyApi = new SpotifyWebApi({
     // TO DO: 
     // COPY CLIENT ID and SECRET HERE + MAKE SURE REDIRECT URI IS SAME ON SPOTIFY DEVELOPER DASHBOARD
-    // clientId: '',
+    // clientId: ',
     // clientSecret: '',
     redirectUri: 'http://localhost:8888/callback'
   });
