@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SIMP Interface</title>
+    
+    <link rel="stylesheet" href="https://use.typekit.net/jct4vdl.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="lib/leap.min.js"></script>
+    <script src="lib/leap-plugins.min.js"></script>
+    <script src="lib/underscore.min.js"></script>
+    <script src="lib/famous.min.js"></script>
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <div class="accordion">
+      <span style="display: inline-flex; margin-top: 10px;">
+        <img src="symbol_assets/simp-header.svg" style="display: inline; width: 40px; height: 40px; margin-right: 20px; margin-left: 10px;">
+        <h1>S I M P  Interface</h1>
+      </span>
+        
+      
+      <div class="contentHeader">
+          <div class="label"> Gesture Command Instructions</div>
+          <div class="content">
+            The following commands utilize the LEAP Motion Controller
+            <br>
+            <br>
+            <p>
+              <b>Pause:</b> fist motion over sensor
+              <br>
+              <img src='instruction_gifs/fist-pause.gif' width=150px; height=150px; class="center">
+            </p>
+            <br>
+            <p>
+              <b>Play:</b> both hands flat over sensor
+              <br>
+              <img src='instruction_gifs/flathands-play.gif' width=150px; height=150px; class="center">
+            </p>
+            <br>
+            <p>
+              <b>Skip to Next Song:</b> fist motion over sensor
+              <br>
+              <img src='instruction_gifs/rightswipe-next.gif' width=150px; height=150px; class="center">
+            </p>
+            <br>
+            <p>
+              <b>Skip to Previous Song:</b> fist motion over sensor
+              <br>
+              <img src='instruction_gifs/leftswipe-previous.gif' width=150px; height=150px; class="center">
+            </p>
+            <br>
+            <p>
+              <b>Lower Volume</b> counterclockwise circular motion with index finger extended
+              <br>
+              <img src='instruction_gifs/counterclockwise-volume.gif' width=150px; height=150px; class="center">
+            </p>
+            <br>
+            <p>
+              <b>Raise Volume:</b> clockwise circular motion with index finger extended
+              <br>
+              <img src='instruction_gifs/clockwise-volume.gif' width=150px; height=150px; class="center">
+            </p>
+            <br>
+            <p>
+              <b>Add/Remove Song from Liked Songs:</b> vertical key tap motion with index finger extended
+              <br>
+              <img src='instruction_gifs/keytap-add-remove.gif' width=150px; height=150px; class="center">
+            </p>
+          </div>
+        
+      </div>
+      <div class="contentHeader">
+        <div class="label">Voice Command Instructions</div>
+        <div class="content">
+          The following commands utilize speech detection:
+          <br>
+          <br>
+          <b>"Queue + {emotion}" </b>: Asks Spotify to add 5 songs to user's queue based on emotion
+          <br>
+          <em> Emotions Supported</em> : Happy, Sad, Angry, Surprise
+          <br>
+          <br>
+          <b>"Open/Close Gesture Command" </b>: Opens/Closes gesture command instructions
+          <br>
+          <br>
+          <b>"Open/Close Voice Command" </b>: Opens/Closes voice command instructions
+          <br>
+        </div>
+      <div class="myHeader">
+        <div id="main">
+          <span style="display: inline-flex; margin-top: 10px; background-color: rgba(255, 255, 255, 0.964); width: 55vw;">      
+            <h2 style="color:#000000;">GESTURE STATUS:</h2>
+            <div id="statusData" style="color: green;"></div>
+          </span> 
+          <span style="display: inline-flex; margin-top: 10px; background-color: rgba(255, 255, 255, 0.964); width: 55vw;">      
+            <h2 style="color:#000000;">QUEUED EMOTION:</h2>
+            <div id="emotionData" style="color: rgb(110, 80, 180);"></div>
+          </span> 
+          <br>
+          <br>
+          <span style="display: inline-flex; margin-top: 10px;">      
+            <h2 style="color:#1DB954;">Gesture Detected:</h2>
+            <div id="gestureData"></div>
+          </span>    
+          <br>
+          <br>
+          <br>
+          <span style="display: inline-flex; margin-top: 10px;">          
+            <h2 style="color: #1DB954;">Spotify Player:</h2>
+            <img class="symbol" id="pausedSymbol" src="symbol_assets/pause.png" style="display: none;">
+            <img class="symbol" id="nextSymbol" src="symbol_assets/next.png" style="display: none">
+            <img class="symbol" id="previousSymbol" src="symbol_assets/previous.png" style="display: none;">
+            <img class="symbol" id="playSymbol" src="symbol_assets/play.png" style="display: none;">
+            <img class="symbol" id="volumeSymbol" src="symbol_assets/volume.svg" style="display: none;">
+            <img class="symbol" id="likeSymbol" src="symbol_assets/like-heart.svg" style="display: none;">
+            <img class="symbol" id="unlikeSymbol" src="symbol_assets/unlike-heart.svg" style="display: none;">
+            
+            <div id="resultData"></div> 
+        </span>
+        </div>
+      </div>
+    
+    </div>
+    
+
+    <script>
+      const accordion = document.getElementsByClassName
+      ('contentHeader');
+
+      for (i = 0; i < accordion.length; i++){
+        accordion[i].addEventListener('click', function(){
+          this.classList.toggle('active');
+        })
+      }
+    </script>
+
+    
+  </body>
+</html>

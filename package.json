@@ -1,0 +1,23 @@
+{
+  "name": "simp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simp_tester.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "leap": "node leap.min.js",
+    "leap-plugins": "node leap-plugins.min.js"
+  
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "bufferutil": "^4.0.3",
+    "express": "^4.17.1",
+    "leapjs": "^1.1.0",
+    "ramda": "^0.27.1",
+    "spotify-web-api-node": "^5.0.2",
+    "utf-8-validate": "^5.0.4"
+  }
+}

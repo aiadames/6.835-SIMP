@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'proxima-nova', sans-serif;
+    font-style: normal;
+    color:#1DB954
+    
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 55%;
+    
+}
+
+body 
+{
+    display: flex;
+    
+    align-items: left;
+    min-height: 100vh;
+    background: #191414;
+}
+
+
+
+h1{
+    font-weight: 800;
+}
+h2
+{
+    color: #fff;
+}
+
+
+
+.accordion 
+{
+    max-width: 100vw;
+}
+  
+
+.accordion .contentHeader 
+{
+    position: relative;
+   
+    width: 55vw;
+
+}
+
+.accordion .contentHeader .label
+{
+    position: relative;
+    padding: 10px;
+    background-color: #1ed760;
+    color:#fff;
+    cursor: pointer;
+    font-weight: 800;
+
+}
+.accordion .contentHeader .label::before
+{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .contentHeader.active .label::before
+{
+    content: '-';
+
+}
+
+.accordion .contentHeader .content
+{
+    position: relative;
+    background: #fff;
+    height: 0;
+    overflow:visible;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+.accordion .contentHeader.active .content
+{
+    height:100vh;
+    padding: 10px;
+}
+
+#resultData 
+{
+    font-weight: 600;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 1.5em;
+}
+
+#gestureData 
+{
+    font-weight: 600;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 1.5em;
+}
+
+#statusData{
+    font-weight: 600;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 1.5em;
+}
+
+#emotionData{
+    font-weight: 600;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 1.5em;
+}
+
+.symbol{
+    margin-left: 30px;
+    margin-top: -5px;
+    width: 35px;
+    height: 35px;
+}
+
+
+
+
+
+
+
+/*
+background-color: #191414;
+
+h1 {
+    color: #1DB954;
+}
+
+
+
+*/
