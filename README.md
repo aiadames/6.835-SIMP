@@ -13,11 +13,12 @@ Packages: tbd
 
 <b> Set Up Instructions: </b>
 
-Download & in directory run following commands for dependencies:
-  'npm install spotify-web-api-node --save' 
-  'npm install -g browserify'
-  'npm install express'
+Download & in directory run following commands for dependencies:\
+  'npm install spotify-web-api-node --save' \
+  'npm install -g browserify'\
+  'npm install express'\
   'npm install --global http-server'
+ 
 Then navigate to Spotify Developer: developer.spotify.com/dashboard to create a new project on your Spotify account
 Edit project on Spotify Developer dashboard once created to have 'Redirect URI' of http://localhost:8888/callback
   - copy 'Client ID' and 'Client Secret' and paste in simp_tester.js values <b>clientId</b> and <b>clientSecret</b>
