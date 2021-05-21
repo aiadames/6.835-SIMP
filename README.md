@@ -33,7 +33,7 @@ Note: Every hour, the Spotify token expires, thus must run 'node simp_tester' to
 ### File Specification:
 #### main.js
 main file that contains bulk of SIMP functionality including Spotify Web API calls (via WebAPI wrapper module), speech recognition (via qebkitSpeechRecognition), and Leap Motion Controller handling (via Leap SDK)
-#### bunder.js
+#### bundle.js
 recompiled version of main.js to support compatibility of node.js 'require' method and subsequent modules with browser 
 #### server.js
 file supports running SIMP node project on browser
