@@ -1,17 +1,13 @@
-# 6.835-SIMP
-Final code for 6.835 project Spotify Integrated Multimodal Program (SIMP)
 ## 6.835 Final Project: Spotify Integrated Multimodal Program (SIMP)
 #### Group Members: Ariana Adames & Derek Velez 
 
-Set Up Instructions:
-
-#### Table of contents
+### Table of contents
 
 1. Setup & Dependencies
 2. File Specification
 
 
-## Setup & Dependencies
+### Setup & Dependencies: 
 Requirements: Node.js V 14.0.0 or higher, Spotify Premium (to control user playback functions provided by API)\
 Packages: tbd
 
@@ -19,6 +15,7 @@ Packages: tbd
 
 Download & in directory run following commands for dependencies:
   'npm install spotify-web-api-node --save' 
+  'npm install -g browserify'
   'npm install express'
   'npm install --global http-server'
 Then navigate to Spotify Developer: developer.spotify.com/dashboard to create a new project on your Spotify account
@@ -33,4 +30,16 @@ Open Spotify Player + run 'http-server' to begin running program on local server
 Note: Every hour, the Spotify token expires, thus must run 'node simp_tester' to aquire new token if expired. Then copy/paste into main.js and recompile to run again.
 
 
-## File Specification
+### File Specification:
+#### main.js
+main file that contains bulk of SIMP functionality including Spotify Web API calls (via WebAPI wrapper module), speech recognition (via qebkitSpeechRecognition), and Leap Motion Controller handling (via Leap SDK)
+#### bunder.js
+recompiled version of main.js to support compatibility of node.js 'require' method and subsequent modules with browser 
+#### server.js
+file supports running SIMP node project on browser
+#### simp_tester.js
+program to authenticate SIMP with Spotify account, fetches access token upon verification
+#### index.html
+main browser and host UI and SIMP output, run on server
+#### lib/leap.min.js, lib/leap-plugins.min.js
+support Leap SDK functionality 
